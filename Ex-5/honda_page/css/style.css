@@ -1,0 +1,187 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CSS NAV */
+header {
+    display: flex;
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav>ul>li>a {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 15px 10px;
+}
+
+div.logo a {
+    display: block;
+}
+
+/* CSS Body */
+.container-body {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* CSS Banner */
+section.banner img {
+    /* visibility: hidden; */
+    width: 100%;
+}
+
+section.banner {
+    /* animation: changeBanner ease-in-out 4.5s infinite; */
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/* @keyframes changeBanner {
+    0% {
+        background-image: url(./images/honda/banner/banner1.jpg);
+    }
+
+    30% {
+        background-image: url(./images/honda/banner/banner2.jpg);
+    }
+
+    70% {
+        background-image: url(./images/honda/banner/banner3.jpg);
+    }
+} */
+
+/* CSS Subject */
+section.subject {
+    background-color: gold;
+    color: white;
+    padding: 20px;
+}
+
+section.subject h1 {
+    font-size: 2vw;
+    text-align: center;
+}
+
+/* CSS Introduction */
+section.introduction {
+    background-color: lightgray;
+    color: gray;
+    text-align: center;
+    padding: 15px 10%;
+}
+
+h1 {
+    font-size: 2vw;
+}
+
+h1.underline::after {
+    content: "";
+    height: 5px;
+    width: 5%;
+    background-color: gray;
+    display: block;
+    margin: 15px auto;
+}
+
+section.introduction p {
+    margin-top: 50px;
+}
+
+/* CSS Introduction-Product */
+section.introduction-product {
+    background-color: lightgray;
+}
+
+div.items {
+    display: flex;
+}
+
+div.item {
+    width: 25%;
+    padding: 10px;
+}
+
+div.item img {
+    max-width: 100%;
+}
+
+div.item>div {
+    background-color: beige;
+    padding: 20px;
+}
+
+/* CSS Product */
+section.product {
+    text-align: center;
+    background-color: lightgray;
+    color: gray;
+}
+
+section.product>h1 {
+    padding-top: 30px;
+}
+
+div.prods {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.prod {
+    width: 33.33%;
+}
+
+div.prod img {
+    max-width: 100%;
+}
+
+/* CSS Stats */
+section.stats {
+    background-color: black;
+    color: white;
+    display: flex;
+    text-align: center;
+}
+
+section.stats h1 {
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+div.stat {
+    width: 25%;
+}
+
+/* CSS Event */
+section.events {
+    text-align: center;
+    background-color: lightgray;
+    color: gray;
+}
+
+section.events h1 {
+    text-align: center;
+}
+
+div.evts {
+    display: flex;
+}
+
+div.evt {
+    width: 25%;
+    padding: 0 5px;
+}
+
+div.evt iframe {
+    max-width: 100%;
+}
