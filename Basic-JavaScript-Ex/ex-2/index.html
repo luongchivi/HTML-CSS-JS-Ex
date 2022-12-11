@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex-2</title>
+    <style>
+        div.ball-area {
+            width: 800px;
+            height: 600px;
+            background-color: lightgray;
+            position: relative;
+        }
+
+        #ballId {
+            position: absolute;
+        }
+    </style>
+    <script>
+        var timer = null
+        function play() {
+            var ball = document.getElementById("ballId")
+            var area = document.getElementsByClassName("ball-area")[0]
+            var le = 0
+            var to = 0
+            var inX = Math.floor(Math.random() * 10)
+            var inY = Math.floor(Math.random() * 10)
+            timer = setInterval(function () {
+                if (le + ball.offsetWidth >= area.offsetWidth || le < 0)
+                    inX = -inX
+
+                if (to + ball.offsetHeight >= area.offsetHeight || to < 0)
+                    inY = -inY
+
+                to += inY
+                le += inX
+
+                ball.style.left = le + "px"
+                ball.style.top = to + "px"
+            }, 20)
+        }
+
+        function stop() {
+            if (timer != null)
+                clearInterval(timer)
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <input type="button" value="Play" onclick="play()">
+        <input type="button" value="Stop" onclick="stop()">
+        <div class="ball-area">
+            <img src="img/ball.png" id="ballId" alt="ball">
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex-4</title>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#showId").click(function () {
+                // show or slideDown, fadeOut, fadeTo
+                $("#ballId").fadeIn(3000, function () {
+                    $("body").css({
+                        "background-color": "blue",
+                        "color": "white"
+                    })
+                })
+            })
+
+            $("#hideId").click(function () {
+                // hide or slideUp, fadeIn
+                $("#ballId").fadeOut(3000, function () {
+                    $("body").css({
+                        "background-color": "blue",
+                        "color": "red"
+                    })
+                })
+            })
+
+            $("#fadeShow").click(function () {
+                $("#ballId").fadeTo(3000, 1, function () {
+                    $("body").css({
+                        "background-color": "green",
+                        "color": "black"
+                    })
+                })
+            })
+
+            $("#fadeHide").click(function () {
+                $("#ballId").fadeTo(3000, 0.1, function () {
+                    $("body").css({
+                        "background-color": "green",
+                        "color": "black"
+                    })
+                })
+            })
+
+            $("#animateId").click(function () {
+                $("#ballId").animate(
+                    {
+                        "left": "600px",
+                        "width": "200px"
+                    },
+                    3000
+                ).animate(
+                    {
+                        "top": "500px",
+                        "width": "500px"
+                    },
+                    3000
+                ).animate(
+                    {
+                        "left": "0px",
+                        "top": "0px",
+                        "width": "150px"
+                    },
+                    3000
+                )
+            })
+        })
+    </script>
+    <style>
+        #ballId {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome To jQuery</h1>
+    <div>
+        <div>
+            <input type="button" value="Show" id="showId">
+            <input type="button" value="Hide" id="hideId">
+            <input type="button" value="fadeShow" id="fadeShow">
+            <input type="button" value="fadeHide" id="fadeHide">
+            <input type="button" value="Animate" id="animateId">
+        </div>
+        <img src="img/ball.png" alt="ball" id="ballId">
+        <h1>TEST</h1>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body>div {
+            margin: auto;
+        }
+
+        /* Button */
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: #fff;
+            border-radius: 15px;
+            padding: 15px 48px;
+            cursor: pointer;
+            transition: opacity 0.2s linear;
+            min-width: 100px;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        .btn+.btn {
+            margin-left: 16px;
+        }
+
+        .btn--success {
+            background-color: #71be34;
+        }
+
+        .btn--warning {
+            background-color: #ffb702;
+        }
+
+        .btn--danger {
+            background-color: #ff623d;
+        }
+
+        .btn--disabled {
+            opacity: 0.5 !important;
+            cursor: default;
+        }
+
+        /* Size Button */
+        .btn--size-l {
+            padding: 20px 53px;
+        }
+
+        .btn--size-s {
+            padding: 10px 43px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button href="" class="btn btn--success btn--disabled btn--size-s">GO TO NEXT APPROVAL</button>
+        <button href="" class="btn btn--warning btn--size-s">OK</button>
+        <button href="" class="btn btn--danger btn--size-s">TRY AGIAN</button>
+    </div>
+    <div>
+        <button href="" class="btn btn--success btn--disabled">GO TO NEXT APPROVAL</button>
+        <button href="" class="btn btn--warning">OK</button>
+        <button href="" class="btn btn--danger">TRY AGIAN</button>
+    </div>
+    <div>
+        <button href="" class="btn btn--success btn--disabled btn--size-l">GO TO NEXT APPROVAL</button>
+        <button href="" class="btn btn--warning btn--size-l">OK</button>
+        <button href="" class="btn btn--danger btn--size-l">TRY AGIAN</button>
+    </div>
+</body>
+
+</html>

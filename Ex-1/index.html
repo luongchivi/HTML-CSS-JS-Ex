@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: lightgray;
+        }
+
+        /* Navbar Layout*/
+        .nav {
+            min-height: 42px;
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nav-list {
+            padding-left: 0;
+            margin: auto 16px;
+            display: flex;
+        }
+
+        .nav-item {
+            color: white;
+            list-style-type: none;
+            display: inline-block;
+            margin: 0 8px;
+        }
+
+        /* Form Layout */
+
+        .form-container {
+            margin: 60px 0;
+            background-color: white;
+            padding: 50px;
+            max-height: 250px;
+        }
+
+        .form__row {
+            padding: 8px 0;
+            display: flex;
+        }
+
+        .form__label {
+            min-width: 120px;
+        }
+
+        .form__input {
+            flex: 1;
+        }
+
+        /* Column Layout */
+        .column-layout {
+            margin: 60px 0;
+            display: flex;
+            padding: 12px 0;
+            background-color: cornsilk;
+        }
+
+        .column-item {
+            padding: 0 20px;
+        }
+
+        .sidebar-one {
+            flex: 1;
+        }
+
+        .main-column {
+            flex: 3;
+        }
+
+        .sidebar-two {
+            flex: 1;
+        }
+
+        /* Feature Layout */
+        .feature-layout {
+            margin-top: 60px 0;
+            justify-content: space-evenly;
+            display: flex;
+        }
+
+        .feature-item {
+            flex-basis: 30%;
+        }
+
+        .feature-item:nth-child(1) {
+            background-color: cornflowerblue;
+        }
+
+        .feature-item:nth-child(2) {
+            background-color: darkslateblue;
+        }
+
+        .feature-item:nth-child(3) {
+            background-color: hotpink;
+        }
+
+        /* Wrap Layout */
+        .wrap-layout {
+            margin: 60px 0;
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+            padding: 60px 0;
+        }
+
+        .wrap-item {
+            width: 150px;
+            height: 90px;
+            color: white;
+            text-align: center;
+            line-height: 6;
+            font-weight: 700;
+            font-size: 700;
+            background-color: red;
+            margin: 0 20px;
+        }
+
+        /* Chart Layout */
+        .chart-layout {
+            margin: 60px 0;
+            background-color: antiquewhite;
+            padding: 10% 0;
+            height: 600px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-end;
+        }
+
+        .class-layout__item {
+            width: 4.5%;
+            color: white;
+            text-align: center;
+            height: var(--percent);
+            background-color: rgb(14, 82, 40);
+            animation: growth ease-in 1s;
+        }
+
+        @keyframes growth {
+            from {
+                opacity: 0;
+                /* height: calc(var(--percent)-50%); */
+                height: 0;
+            }
+
+            to {
+                opacity: 1;
+                height: var(--percent);
+            }
+        }
+
+        /* Content Layout */
+        .content {
+            margin: 60px 0;
+            display: flex;
+        }
+
+        .content-item-one {
+            background-color: burlywood;
+            flex: 1;
+        }
+
+        .content-item-two {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .content-item-two__one {
+            background-color: gray;
+            flex: 1;
+        }
+
+        .content-item-two__two {
+            background-color: aquamarine;
+            flex: 1;
+        }
+
+        h2,
+        p {
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Layout-->
+    <div class="nav">
+        <ul class="nav-list">
+            <li class="nav-item">Home</li>
+            <li class="nav-item">Product</li>
+            <li class="nav-item">Contact</li>
+        </ul>
+        <ul class="nav-list">
+            <li class="nav-item">Login</li>
+            <li class="nav-item">Cart</li>
+        </ul>
+    </div>
+
+    <!-- Form Layout -->
+    <div class="form-container">
+        <form action="" class="form">
+            <div class="form__row">
+                <label for="name" class="form__label">Name:</label>
+                <input type="text" class="form__input">
+            </div>
+            <div class="form__row">
+                <label for="name" class="form__label">Password:</label>
+                <input type="password" class="form__input">
+            </div>
+        </form>
+    </div>
+
+    <!-- Column Layout -->
+    <div class="column-layout">
+        <div class="column-item sidebar-one">
+            <h2>Sidebar One</h2>
+            <p>A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can
+                often happen due to being stuck with a current project that the writer is trying to complete. By
+                inserting a completely random paragraph from which to begin, it can take down some of the issues that
+                may have been causing the writers' block in the first place. </p>
+        </div>
+        <div class="column-item main-column">
+            <h2>Main Column</h2>
+            <p>A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can
+                often happen due to being stuck with a current project that the writer is trying to complete. By
+                inserting a completely random paragraph from which to begin, it can take down some of the issues that
+                may have been causing the writers' block in the first place. </p>
+            <p>A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can
+                often happen due to being stuck with a current project that the writer is trying to complete. By
+                inserting a completely random paragraph from which to begin, it can take down some of the issues that
+                may have been causing the writers' block in the first place. </p>
+            <p>A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can
+                often happen due to being stuck with a current project that the writer is trying to complete. By
+                inserting a completely random paragraph from which to begin, it can take down some of the issues that
+                may have been causing the writers' block in the first place. </p>
+        </div>
+        <div class="column-item sidebar-two">
+            <h2>Sidebar Two</h2>
+            <p>A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can
+                often happen due to being stuck with a current project that the writer is trying to complete. By
+                inserting a completely random paragraph from which to begin, it can take down some of the issues that
+                may have been causing the writers' block in the first place. </p>
+        </div>
+    </div>
+
+    <!-- Feature Layout -->
+    <div class="feature-layout">
+        <div class="feature-item">
+            <h2>Feature 1</h2>
+            <p>A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can
+                often happen due to being stuck with a current project that the writer is trying to complete. By
+                inserting a completely random paragraph from which to begin, it can take down some of the issues that
+                may have been causing the writers' block in the first place. </p>
+        </div>
+        <div class="feature-item">
+            <h2>Feature 2</h2>
+            <p>A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can
+                often happen due to being stuck with a current project that the writer is trying to complete. By
+                inserting a completely random paragraph from which to begin, it can take down some of the issues that
+                may have been causing the writers' block in the first place. </p>
+        </div>
+        <div class="feature-item">
+            <h2>Feature 3</h2>
+            <p>A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can
+                often happen due to being stuck with a current project that the writer is trying to complete. By
+                inserting a completely random paragraph from which to begin, it can take down some of the issues that
+                may have been causing the writers' block in the first place. </p>
+        </div>
+    </div>
+
+    <!-- Wrap Layout -->
+    <div class="wrap-layout">
+        <div class="wrap-item">1</div>
+        <div class="wrap-item">2</div>
+        <div class="wrap-item">3</div>
+        <div class="wrap-item">4</div>
+        <div class="wrap-item">5</div>
+    </div>
+
+    <!-- Chart Layout -->
+    <div class="chart-layout">
+        <div class="class-layout__item" style="--percent: 10%">10%</div>
+        <div class="class-layout__item" style="--percent: 50%">50%</div>
+        <div class="class-layout__item" style="--percent: 90%">90%</div>
+        <div class="class-layout__item" style="--percent: 100%">100%</div>
+        <div class="class-layout__item" style="--percent: 40%">40%</div>
+        <div class="class-layout__item" style="--percent: 20%">20%</div>
+        <div class="class-layout__item" style="--percent: 70%">70%</div>
+        <div class="class-layout__item" style="--percent: 30%">30%</div>
+        <div class="class-layout__item" style="--percent: 40%">40%</div>
+        <div class="class-layout__item" style="--percent: 20%">20%</div>
+        <div class="class-layout__item" style="--percent: 70%">70%</div>
+    </div>
+
+    <!-- Content Layout -->
+    <div class="content">
+        <div class="content-item-one">
+            <p>A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can
+                often happen due to being stuck with a current project that the writer is trying to complete. By
+                inserting a completely random paragraph from which to begin, it can take down some of the issues that
+                may have been causing the writers' block in the first place. </p>
+            <p>A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can
+                often happen due to being stuck with a current project that the writer is trying to complete. By
+                inserting a completely random paragraph from which to begin, it can take down some of the issues that
+                may have been causing the writers' block in the first place. </p>
+            <p>A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can
+                often happen due to being stuck with a current project that the writer is trying to complete. By
+                inserting a completely random paragraph from which to begin, it can take down some of the issues that
+                may have been causing the writers' block in the first place. </p>
+        </div>
+        <div class="content-item-two">
+            <div class="content-item-two__one">
+                <p>A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block
+                    can often happen due to being stuck with a current project that the writer is trying to complete. By
+                    inserting a completely random paragraph from which to begin, it can take down some of the issues
+                    that may have been causing the writers' block in the first place. </p>
+            </div>
+            <div class="content-item-two__two">
+                <p>A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block
+                    can often happen due to being stuck with a current project that the writer is trying to complete. By
+                    inserting a completely random paragraph from which to begin, it can take down some of the issues
+                    that may have been causing the writers' block in the first place. </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

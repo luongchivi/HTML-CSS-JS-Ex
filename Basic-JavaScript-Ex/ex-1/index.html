@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samsung Galaxy S8</title>
+    <style>
+        div.items {
+            display: flex;
+        }
+
+        div.item-left {
+            width: 50%;
+        }
+
+        div.thumb {
+            display: flex;
+        }
+
+        div.item-left img {
+            width: 100%;
+        }
+
+        div.btns a img {
+            width: 100%;
+        }
+
+        div.item-right {
+            width: 50%;
+        }
+
+        div.item-right h1 {
+            text-align: center;
+            font-size: xx-large;
+        }
+
+        div.btns {
+            width: 20%;
+            display: flex;
+            position: relative;
+            left: 43%;
+
+        }
+
+        div.btns {
+            display: flex;
+        }
+
+        div.btns>div {
+            padding: 2%;
+        }
+
+        div.btns>div>a {
+            display: block;
+        }
+    </style>
+    <script>
+        // cách 1
+        // function changeImage(obj) {
+        //     var path = obj.src
+        //     var img = document.getElementById("mainImg")
+        //     // img.src = path
+        //     img.setAttribute("src", path)
+        // }
+
+        // cách 2 dùng selector 
+        function init() {
+            var img = document.querySelectorAll("div.thumb img")
+            for (var i = 0; i < img.length; i++) {
+                img[i].onclick = function () {
+                    // alert(this.src)
+                    var path = this.src
+                    var img = document.getElementById("mainImg")
+                    img.setAttribute("src", path)
+                }
+            }
+
+            var buttons = document.querySelectorAll(".btns>div>a")
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].onclick = function () {
+                    event.preventDefault()
+                    var color = this.getAttribute("rel")
+                    // alert(color)
+                    var img = document.getElementById("mainImg")
+                    // img.src = "/img/galaxys8/" + color + "-default.png"
+                    img.src = `/img/galaxys8/${color}-default.png`
+                    var subImage = document.querySelectorAll(".thumb img")
+                    for (var i = 0; i < subImage.length; i++) {
+                        subImage[i].src = `/img/galaxys8/${color}-${i}.png`
+                    }
+                }
+            }
+
+            // thêm 1 node vào DOM
+            var d = document.getElementById("test")
+            var h1 = document.createElement("h1")
+            var text_h1 = document.createTextNode("Welcome h1")
+            h1.appendChild(text_h1)
+            d.appendChild(h1)
+            h1.style.color = "red"
+            h1.setAttribute("title", "This is title")
+            // h1.setAttribute("style", "color:blue")
+            d.innerHTML += "<h2>Welcome h2</h2>"
+            d.innerHTML += "<h3>Welcome h3</h3>"    
+
+            // xóa 1 node trên DOM
+            var h2 = document.querySelector("#test h2")
+            d.removeChild(h2)
+
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <!-- cách 1 -->
+    <!-- <div class="item">
+        <img src="/img/galaxys8/black-default.png" id="mainImg" alt="phone">
+        <div class="thumb">
+            <img src="/img/galaxys8/black-default.png" onclick="changeImage(this)" alt="phone-defalut">
+            <img src="/img/galaxys8/black-1.png" onclick="changeImage(this)" alt="phone-1">
+            <img src="/img/galaxys8/black-2.png" onclick="changeImage(this)" alt="phone-2">
+            <img src="/img/galaxys8/black-3.png" onclick="changeImage(this)" alt="phone-3">
+            <img src="/img/galaxys8/black-4.png" onclick="changeImage(this)" alt="phone-4">
+        </div>
+    </div> -->
+
+    <!-- cách 2 bắt event sau khi load hết cây DOM -->
+    <div class="items">
+        <div class="item-left">
+            <img src="/img/galaxys8/black-default.png" id="mainImg" alt="phone">
+            <div class="thumb">
+                <img src="/img/galaxys8/black-0.png" alt="phone-defalut">
+                <img src="/img/galaxys8/black-1.png" alt="phone-1">
+                <img src="/img/galaxys8/black-2.png" alt="phone-2">
+                <img src="/img/galaxys8/black-3.png" alt="phone-3">
+                <img src="/img/galaxys8/black-4.png" alt="phone-4">
+            </div>
+        </div>
+        <div class="item-right">
+            <h1>Samsung Galaxy S8 Plus</h1>
+            <div class="btns">
+                <div>
+                    <a href="#" rel="black">
+                        <img src="/img/buttons/btn-black.png" alt="btn-black">
+                    </a>
+                </div>
+                <div>
+                    <a href="#" rel="blue">
+                        <img src="/img/buttons/btn-blue.png" alt="btn-blue">
+                    </a>
+                </div>
+                <div>
+                    <a href="#" rel="gold">
+                        <img src="/img/buttons/btn-gold.png" alt="btn-gold">
+                    </a>
+                </div>
+                <div>
+                    <a href="#" rel="pink">
+                        <img src="/img/buttons/btn-pink.png" alt="btn-pink">
+                    </a>
+                </div>
+                <div>
+                    <a href="#" rel="silver">
+                        <img src="/img/buttons/btn-silver.png" alt="btn-silver">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="test"></div>
+
+</body>
+
+</html>

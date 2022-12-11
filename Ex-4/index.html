@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body>div {
+            margin: auto;
+        }
+
+        /* Toast Message */
+        .toast {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 3px;
+            border-left: 4px solid;
+            padding: 20px 0;
+            min-width: 400px;
+            max-width: 450px;
+            box-shadow: 0 5px 8px rgba(0, 0, 0, 0.8);
+            /* transform: translateX(calc(100% + 32px)); */
+            /* animation: slideInLeft ease 0.8s, fadeOut linear 1s 3s forwards; */
+            transition: all linear 0.3s;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(calc(100% + 32px));
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+            }
+        }
+
+        .toast__icon,
+        .toast__close {
+            padding: 0 16px;
+        }
+
+        .toast__icon {
+            font-size: 30px;
+        }
+
+        .toast__close {
+            font-size: 25px;
+            color: rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        .toast+.toast {
+            margin: 24px 0;
+        }
+
+        .toast__title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .toast__msg {
+            font-size: 14px;
+            color: #888;
+            margin-top: 4px;
+        }
+
+        .toast__body {
+            padding: 0 15px;
+            flex-grow: 1;
+        }
+
+        .toast--success {
+            border-color: #47d864;
+        }
+
+        .toast--success .toast__icon {
+            color: #47d864;
+        }
+
+        .toast--info {
+            border-color: #2f86eb;
+        }
+
+        .toast--info .toast__icon {
+            color: #2f86eb;
+        }
+
+
+        .toast--warning {
+            border-color: #ffc021;
+        }
+
+        .toast--warning .toast__icon {
+            color: #ffc021;
+        }
+
+        .toast--error {
+            border-color: #ff623d;
+        }
+
+        .toast--error .toast__icon {
+            color: #ff623d;
+        }
+
+        #toast {
+            position: fixed;
+            top: 32px;
+            right: 32px;
+        }
+
+        /* Button */
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: #fff;
+            border-radius: 15px;
+            padding: 15px 48px;
+            cursor: pointer;
+            transition: opacity 0.2s linear;
+            min-width: 100px;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        .btn+.btn {
+            margin-left: 16px;
+        }
+
+        .btn--success {
+            background-color: #71be34;
+        }
+
+        .btn--warning {
+            background-color: #ffb702;
+        }
+
+        .btn--danger {
+            background-color: #ff623d;
+        }
+
+        .btn--disabled {
+            opacity: 0.5 !important;
+            cursor: default;
+        }
+
+        /* Size Button */
+        .btn--size-l {
+            padding: 20px 53px;
+        }
+
+        .btn--size-s {
+            padding: 10px 43px;
+        }
+    </style>
+    <title>Toast message</title>
+</head>
+
+<body>
+    <div id="toast"></div>
+
+    <!-- <div id="toast">
+
+        <div class="toast toast--success">
+            <div class="toast__icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title">Success</h3>
+                <p class="toast__msg">Kết nối đến máy chủ thành công.</p>
+            </div>
+            <div class="toast__close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+
+
+        <div class="toast toast--info">
+            <div class="toast__icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title">Info</h3>
+                <p class="toast__msg">Kết nối đến Server Ubuntu.</p>
+            </div>
+            <div class="toast__close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+
+
+        <div class="toast toast--warning">
+            <div class="toast__icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title">Warning</h3>
+                <p class="toast__msg">Kết nối đường truyền bị chậm.</p>
+            </div>
+            <div class="toast__close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+
+
+        <div class="toast toast--error">
+            <div class="toast__icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title">Error</h3>
+                <p class="toast__msg">Mất kết nói đến máy chủ.</p>
+            </div>
+            <div class="toast__close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+    </div> -->
+
+    <div>
+        <div class="btn btn--success" onclick="showSuccessToast()">Show Success Toast</div>
+        <div class="btn btn--danger" onclick="showErrorToast()">Show Error Toast</div>
+    </div>
+
+    <script>
+        // Toast Function
+        function toast({
+            tilte = '',
+            message = '',
+            type = 'info',
+            duration = 1000
+        }) {
+            const main = document.getElementById('toast');
+            if (main) {
+                const toast = document.createElement('div');
+
+                // Auto remove toast message
+                const autoRemoveId = setTimeout(function () {
+                    main.removeChild(toast);
+                }, duration + 1000)
+
+                // Remove toast when click 
+                toast.onclick = function (e) {
+                    // console.log(e.target);
+                    if (e.target.closest('.toast__close')) {
+                        main.removeChild(toast);
+                        clearTimeout(autoRemoveId);
+                    }
+                }
+
+                const icons = {
+                    success: 'fa-solid fa-circle-check',
+                    info: 'fa-solid fa-circle-info',
+                    warning: 'fa-solid fa-triangle-exclamation',
+                    error: 'fa-solid fa-circle-exclamation',
+                };
+                const icon = icons[type]
+                const delay = (duration / 1000).toFixed(2);
+                toast.classList.add('toast', `toast--${type}`);
+                toast.style.animation = `slideInLeft ease 0.8s, fadeOut linear 1s ${delay}s forwards`;
+                toast.innerHTML = `
+                    <div class="toast__icon">
+                        <i class="${icon}"></i>
+                    </div>
+                    <div class="toast__body">
+                        <h3 class="toast__title">${tilte}</h3>
+                        <p class="toast__msg">${message}</p>
+                    </div>
+                    <div class="toast__close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                `;
+                main.appendChild(toast);
+            }
+        }
+
+        // toast({
+        //     tilte: 'Success',
+        //     message: 'Kết nối đến máy chủ thành công.',
+        //     type: 'warning',
+        //     duration: 3000
+        // });
+
+        function showSuccessToast() {
+            toast({
+                tilte: 'Success',
+                message: 'Kết nối đến máy chủ thành công.',
+                type: 'success',
+                duration: 5000
+            });
+        }
+
+        function showErrorToast() {
+            toast({
+                tilte: 'Error',
+                message: 'Mất kết nói đến máy chủ.',
+                type: 'error',
+                duration: 5000
+            });
+        }
+    </script>
+</body>
+
+</html>
