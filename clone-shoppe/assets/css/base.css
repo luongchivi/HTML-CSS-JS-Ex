@@ -2,6 +2,7 @@
     --white-color: #fff;
     --black-color: #000;
     --text-color: #333;
+    --primary-color: #ee4d2d;
 }
 
 * {
@@ -40,4 +41,16 @@ html {
 /* 1rem dựa trên html font-size nên bằng 16px */
 p {
     font-size: 1rem;
+}
+
+/* Animation */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

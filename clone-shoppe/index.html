@@ -19,6 +19,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.2.1-web/css/all.min.css">
 </head>
 
 <body>
@@ -28,22 +30,132 @@
             <div class="grid">
                 <nav class="header__navbar">
                     <ul class="header__navbar-list">
-                        <li class="header__navbar-item header__navbar-item--separate">Vào cửa hàng trên ứng dụng TickID
+                        <li class="header__navbar-item header__navbar-item--separate">
+                            Kênh Người Bán
                         </li>
-                        <li class="header__navbar-item">Kết nối</li>
+                        <li class="header__navbar-item header__navbar-item--separate">
+                            Trở thành Người bán Shoppee
+                        </li>
+                        <li class="header__navbar-item header__navbar-item--separate header__navbar-item--has-qr">
+                            Tải ứng dụng
+                            <div class="header__qr">
+                                <img src="./assets/imgs/apps_qr/app_qr_download.png" alt="QR code"
+                                    class="header___qr-img">
+                                <div class="header__qr-apps">
+                                    <a href="" class="header__qr-link">
+                                        <img src="./assets/imgs/apps_qr/app_store.png" alt="Image App Store"
+                                            class="header__qr-download-img">
+                                    </a>
+                                    <a href="" class="header__qr-link">
+                                        <img src="./assets/imgs/apps_qr/google_play.png" alt="Image Google Play"
+                                            class="header__qr-download-img">
+                                    </a>
+                                    <a href="" class="header__qr-link">
+                                        <img src="./assets/imgs/apps_qr/app_gallery.png" alt="Image App Gallery"
+                                            class="header__qr-download-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header__navbar-item">
+                            <span class="header__navbar--title--no-pointer">Kết nối</span>
+                            <a href="" class="header__navbar-icon-link">
+                                <i class="header__navbar-icon fa-brands fa-facebook"></i>
+                            </a>
+                            <a href="" class="header__navbar-icon-link">
+                                <i class="header__navbar-icon fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
                     </ul>
 
                     <ul class="header__navbar-list">
-                        <li class="header__navbar-item">
-                            <a href="" class="header__navbar-item-link">Thông báo</a>
+                        <li class="header__navbar-item header__navbar-item--has-notification">
+                            <a href="" class="header__navbar-item-link">
+                                <i class="header__navbar-icon fa-solid fa-bell"></i>
+                                Thông báo
+                            </a>
+                            <div class="header__notify">
+                                <header class="header__notify-header">
+                                    <h3>Thông báo mới nhận</h3>
+                                </header>
+                                <ul class="header__notify-list">
+                                    <li class="header__notify-item header__notify-item--viewed">
+                                        <a href="" class="header__notify-link">
+                                            <div class="header__notify-img">
+                                                <img src="./assets/imgs/notify_imgs/đồng hồ.jpg" alt="">
+                                            </div>
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Sản phẩn đồng hồ để bàn tích hợp với
+                                                    loa Bluetooth</span>
+                                                <span class="header__notify-description">Sản phẩm chính hãng bảo hành 1
+                                                    năm</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item header__notify-item--viewed">
+                                        <a href="" class="header__notify-link">
+                                            <div class="header__notify-img">
+                                                <img src="./assets/imgs/notify_imgs/Narzo 50i Prime.jpg" alt="">
+                                            </div>
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">[Mã ELRE500 giảm 10% đơn 500K] Điện
+                                                    thoại Realme Narzo 50i Prime (4GB/64GB) - Hàng Chính Hãng</span>
+                                                <span class="header__notify-description">Sản phẩm chính hãng bảo hành 1
+                                                    năm</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item header__notify-item--viewed">
+                                        <a href="" class="header__notify-link">
+                                            <div class="header__notify-img">
+                                                <img src="./assets/imgs/notify_imgs/iphone 14 pro max.jpg" alt="">
+                                            </div>
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">[Mã ELSD4 giảm 4% đơn 500K] Apple
+                                                    iPhone 14 Pro Max 128GB</span>
+                                                <span class="header__notify-description">Sản phẩm chính hãng bảo hành 1
+                                                    năm</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item">
+                                        <a href="" class="header__notify-link">
+                                            <div class="header__notify-img">
+                                                <img src="./assets/imgs/notify_imgs/đồng hồ.jpg" alt="">
+                                            </div>
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Sản phẩn đồng hồ để bàn tích hợp với
+                                                    loa Bluetooth</span>
+                                                <span class="header__notify-description">Sản phẩm chính hãng bảo hành 1
+                                                    năm</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <footer class="header__notify-footer">
+                                    <a href="" class="header__notify-footer-btn">
+                                        Xem tất cả
+                                    </a>
+                                </footer>
+                            </div>
                         </li>
                         <li class="header__navbar-item">
-                            <a href="" class="header__navbar-item-link">Trợ giúp</a>
+                            <a href="" class="header__navbar-item-link">
+                                <i class="header__navbar-icon fa-regular fa-circle-question"></i>
+                                Hỗ Trợ
+                            </a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link">
+                                <i class="header__navbar-icon fa-solid fa-globe"></i>
+                                Tiếng Việt
+                            </a>
                         </li>
                         <li class="header__navbar-item">
                             <a href=""
-                                class="header__navbar-item-link header__navbar-item--strong header__navbar-item--separate">Đăng
-                                ký</a>
+                                class="header__navbar-item-link header__navbar-item--strong header__navbar-item--separate">
+                                Đăng ký
+                            </a>
                         </li>
                         <li class="header__navbar-item">
                             <a href="" class="header__navbar-item-link header__navbar-item--strong">Đăng nhập</a>
