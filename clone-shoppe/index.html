@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopee</title>
+    <title>Shopee Việt Nam | Mua và Bán Trên Ứng Dụng Di Dộng Hoặc Website</title>
     <!-- Reset CSS code -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
@@ -21,6 +21,7 @@
         rel="stylesheet">
     <!-- Fontawesome -->
     <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.2.1-web/css/all.min.css">
+    <link rel="shortcut icon" href="./assets/imgs/favicon/shopee-icon.webp" type="image/x-icon">
 </head>
 
 <body>
@@ -145,11 +146,21 @@
                                 Hỗ Trợ
                             </a>
                         </li>
-                        <li class="header__navbar-item">
+                        <li class="header__navbar-item header__navbar-item--has-translate">
                             <a href="" class="header__navbar-item-link">
                                 <i class="header__navbar-icon fa-solid fa-globe"></i>
                                 Tiếng Việt
                             </a>
+                            <div class="header__translate">
+                                <ul class="header__translate-list">
+                                    <li class="header__translate-item">
+                                        <a href="" class="header__translate-link">Tiếng Việt</a>
+                                    </li>
+                                    <li class="header__translate-item">
+                                        <a href="" class="header__translate-link">English</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="header__navbar-item">
                             <a href=""
@@ -172,6 +183,117 @@
         <footer class="footer">
 
         </footer>
+
+        <!-- Modal Layout -->
+        <div class="modal">
+            <div class="modal__overlay"></div>
+            <div class="modal__body">
+                <!-- Login Form -->
+                <div class="auth-form">
+                    <div class="auth-form__container">
+                        <!-- Header -->
+                        <div class="auth-form__header">
+                            <h3 class="auth-form__headering">Đăng ký</h3>
+                            <span class="auth-form__switch-btn">Đăng nhập</span>
+                        </div>
+
+                        <!-- Form Input -->
+                        <div class="auth-form__form">
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input"
+                                    placeholder="Nhập vào số điện thoại hoặc Email của Bạn">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Nhập vào Mật Khẩu của Bạn">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Nhập lại Mật Khẩu">
+                            </div>
+                        </div>
+
+                        <!-- Aside Form -->
+                        <div class="auth-form__aside">
+                            <p class="auth-form__policy-text">
+                                Bằng việc đăng kí, bạn đã đồng ý với Shopee về
+                                <a href="" class="auth-form__policy-link">Điều khoản dịch vụ</a> &
+                                <a href="" class="auth-form__policy-link">Chính sách bảo mật</a>.
+                            </p>
+                        </div>
+
+                        <!-- Click Buttons  -->
+                        <div class="auth-form__controls">
+                            <button class="btn auth-form__controls-back">TRỞ LẠI</button>
+                            <button class="btn btn--primary">ĐĂNG KÝ</button>
+                        </div>
+                    </div>
+
+                    <!-- Login Socials -->
+                    <div class="auth-form__socials">
+                        <a href="" class="auth-form__socials--facebook btn btn--size-l">
+                            <i class="auth-form__socials-with-icon fa-brands fa-square-facebook"></i>
+                            <span class="auth-form__socials-title">Kết nối với Facebook</span>
+                        </a>
+                        <a href="" class="btn btn--size-l">
+                            <i class="auth-form__socials-with-icon fa-brands fa-google"></i>
+                            <span class="auth-form__socials-title">Kết nối với Google</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Register Form -->
+                <div class="auth-form">
+                    <div class="auth-form__container">
+                        <!-- Header -->
+                        <div class="auth-form__header">
+                            <h3 class="auth-form__headering">Đăng nhập</h3>
+                            <span class="auth-form__switch-btn">Đăng ký</span>
+                        </div>
+
+                        <!-- Form Input -->
+                        <div class="auth-form__form">
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input"
+                                    placeholder="Nhập vào số điện thoại hoặc Email của Bạn">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Nhập vào Mật Khẩu của Bạn">
+                            </div>
+                        </div>
+
+                        <!-- Aside Form -->
+                        <div class="auth-form__aside">
+                            <p class="auth-form__policy-text">
+                                Bằng việc đăng kí, bạn đã đồng ý với Shopee về
+                                <a href="" class="auth-form__policy-link">Điều khoản dịch vụ</a> &
+                                <a href="" class="auth-form__policy-link">Chính sách bảo mật</a>.
+                            </p>
+                        </div>
+
+                        <!-- Click Buttons  -->
+                        <div class="auth-form__controls">
+                            <button class="btn auth-form__controls-back">TRỞ LẠI</button>
+                            <button class="btn btn--primary">ĐĂNG NHẬP</button>
+                        </div>
+                    </div>
+
+                    <!-- Login Socials -->
+                    <div class="auth-form__socials">
+                        <a href="" class="auth-form__socials--sms btn btn--size-m">
+                            <i class="auth-form__socials-with-icon fa-solid fa-comment-dots"></i>
+                            <span class="auth-form__socials-title">SMS</span>
+                        </a>
+                        <a href="" class="auth-form__socials--facebook btn btn--size-m">
+                            <i class="auth-form__socials-with-icon fa-brands fa-square-facebook"></i>
+                            <span class="auth-form__socials-title">Facebook</span>
+                        </a>
+                        <a href="" class="btn btn--size-m">
+                            <i class="auth-form__socials-with-icon fa-brands fa-google"></i>
+                            <span class="auth-form__socials-title">Google</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 

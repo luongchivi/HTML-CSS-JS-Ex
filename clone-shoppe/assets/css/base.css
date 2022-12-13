@@ -3,6 +3,7 @@
     --black-color: #000;
     --text-color: #333;
     --primary-color: #ee4d2d;
+    --border-color: #dbdbdb;
 }
 
 * {
@@ -43,7 +44,7 @@ p {
     font-size: 1rem;
 }
 
-/* Animation */
+/* Animation Header QR*/
 
 @keyframes fadeIn {
     0% {
@@ -52,5 +53,18 @@ p {
 
     100% {
         opacity: 1;
+    }
+}
+
+/* Animation Header Notification*/
+@keyframes headerNotifyGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
 }
