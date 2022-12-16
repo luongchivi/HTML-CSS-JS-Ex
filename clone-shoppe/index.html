@@ -163,7 +163,8 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="header__navbar-item">
+                        <!-- User not login -->
+                        <!-- <li class="header__navbar-item">
                             <a href=""
                                 class="header__navbar-item-link header__navbar-item--strong header__navbar-item--separate">
                                 Đăng ký
@@ -171,6 +172,35 @@
                         </li>
                         <li class="header__navbar-item">
                             <a href="" class="header__navbar-item-link header__navbar-item--strong">Đăng nhập</a>
+                        </li> -->
+                        <li class="header__navbar-item header__navbar-user">
+                            <div class="header__navbar-icon  header__navbar-user-img-icon">
+                                <img src="./assets/imgs/user_avata/avata.png" alt="avata user"
+                                    class="header__navbar-user-img">
+                            </div>
+                            <span class="header__navbar-user-name">Lương Chí Vĩ</span>
+
+                            <!-- User Info Menu -->
+                            <div class="header__navbar-user-menu-area">
+                                <ul class="header__navbar-user-menu">
+                                    <li class="header__navbar-user-item">
+                                        <a href="" class="header__navbar-user-item-link">
+                                            Tài Khoản Của Tôi
+                                        </a>
+                                    </li>
+                                    <li class="header__navbar-user-item">
+                                        <a href="" class="header__navbar-user-item-link">
+                                            Đơn Mua Hàng
+                                        </a>
+                                    </li>
+                                    <li class="header__navbar-user-item">
+                                        <a href="" class="header__navbar-user-item-link">
+                                            Đăng Xuất
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
                         </li>
                     </ul>
                 </nav>
@@ -219,14 +249,87 @@
                     </div>
 
                     <div class="header__cart">
-                        <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
+                        <div class="header__cart-area">
+                            <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
+                            <!-- No Cart Item Notification Using header__cart-notify-empty -->
+                            <span class="header__cart-notify">3</span>
+                        </div>
+
+                        <!-- No Cart Item Using header__cart-item-empty -->
                         <div class="header__cart-view">
                             <div class="header__cart-list">
-                                <div class="header__cart-list-img">
-                                    <img src="./assets/imgs/carts/empty_cart.png" alt=""
-                                        class="header__cart-no-product-img">
+
+                                <header class="header__cart-list-header">
+                                    <h3 class="header__cart-list-title">Sản phẩm đã thêm</h3>
+                                </header>
+
+                                <div class="header__cart-item header__cart-item-empty">
+                                    <div class="header__cart-item-img">
+                                        <img src="./assets/imgs/carts/empty_cart.png" alt=""
+                                            class="header__cart-item-empty-img">
+                                        <img src="./assets/imgs/notify_imgs/iphone 14 pro max.jpg" alt=""
+                                            class="header__cart-item-not-empty-img">
+                                    </div>
+                                    <div class="header__cart-item-description">
+                                        <h3 class="header__cart-item-description-title">IPhone 14 Pro Max 128GB</h3>
+                                        <span class="header__cart-item-description-type">Phân loại hàng: Màu Đen</span>
+                                    </div>
+                                    <div class="header__cart-item-info">
+                                        <div class="header__cart-item-info-header">
+                                            <h3 class="header__cart-item-info-price">36,000,000</h3>
+                                            <span class="header__cart-item-info-quantity">x 1</span>
+                                        </div>
+                                        <div class="header__cart-item-info-btn">
+                                            <a href="" class="header__cart-item-info-link">Xóa</a>
+                                        </div>
+                                    </div>
+                                    <h3 class="header__cart-item-empty-msg">Chưa Có Sản Phẩm</h3>
                                 </div>
-                                <h3 class="header__cart-list-msg">Chưa Có Sản Phẩm</h3>
+                                <div class="header__cart-item">
+                                    <div class="header__cart-item-img">
+                                        <img src="./assets/imgs/notify_imgs/iphone 14 pro max.jpg" alt=""
+                                            class="header__cart-item-not-empty-img">
+                                    </div>
+                                    <div class="header__cart-item-description">
+                                        <h3 class="header__cart-item-description-title">IPhone 14 Pro Max 128GB</h3>
+                                        <span class="header__cart-item-description-type">Phân loại hàng: Màu Đen</span>
+                                    </div>
+                                    <div class="header__cart-item-info">
+                                        <div class="header__cart-item-info-header">
+                                            <h3 class="header__cart-item-info-price">36,000,000</h3>
+                                            <span class="header__cart-item-info-quantity">x 1</span>
+                                        </div>
+                                        <div class="header__cart-item-info-btn">
+                                            <a href="" class="header__cart-item-info-link">Xóa</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header__cart-item">
+                                    <div class="header__cart-item-img">
+                                        <img src="./assets/imgs/notify_imgs/iphone 14 pro max.jpg" alt=""
+                                            class="header__cart-item-not-empty-img">
+                                    </div>
+                                    <div class="header__cart-item-description">
+                                        <h3 class="header__cart-item-description-title">IPhone 14 Pro Max 128GB</h3>
+                                        <span class="header__cart-item-description-type">Phân loại hàng: Màu Đen</span>
+                                    </div>
+                                    <div class="header__cart-item-info">
+                                        <div class="header__cart-item-info-header">
+                                            <h3 class="header__cart-item-info-price">36,000,000</h3>
+                                            <span class="header__cart-item-info-quantity">x 1</span>
+                                        </div>
+                                        <div class="header__cart-item-info-btn">
+                                            <a href="" class="header__cart-item-info-link">Xóa</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <footer class="header__cart-list">
+                                    <a href="" class="header__cart-view-cart-btn">
+                                        Xem Giỏ Hàng
+                                    </a>
+                                </footer>
+
                             </div>
                         </div>
                     </div>
@@ -235,8 +338,34 @@
             </div>
         </header>
 
-        <div class="container">
+        <div class="app__container">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-2">
+                        <nav class="category">
+                            <h3 class="category__heading">
+                                <i class="category__heading-icon fa-solid fa-list"></i>
+                                Danh mục
+                            </h3>
+                            <ul class="category-list">
+                                <li class="category-item category-item--active">
+                                    <a href="" class="category-item__link">Trang điểm mặt</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="" class="category-item__link">Trang điểm môi</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="" class="category-item__link">Trang điểm mắt</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
 
+                    <div class="grid__column-10">
+
+                    </div>
+                </div>
+            </div>
         </div>
 
         <footer class="footer">
