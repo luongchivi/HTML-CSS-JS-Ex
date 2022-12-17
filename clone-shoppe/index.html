@@ -257,12 +257,12 @@
 
                         <!-- No Cart Item Using header__cart-item-empty -->
                         <div class="header__cart-view">
+
+                            <header class="header__cart-list-header">
+                                <h3 class="header__cart-list-title">Sản phẩm đã thêm</h3>
+                            </header>
+
                             <div class="header__cart-list">
-
-                                <header class="header__cart-list-header">
-                                    <h3 class="header__cart-list-title">Sản phẩm đã thêm</h3>
-                                </header>
-
                                 <div class="header__cart-item header__cart-item-empty">
                                     <div class="header__cart-item-img">
                                         <img src="./assets/imgs/carts/empty_cart.png" alt=""
@@ -323,14 +323,71 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <footer class="header__cart-list">
-                                    <a href="" class="header__cart-view-cart-btn">
-                                        Xem Giỏ Hàng
-                                    </a>
-                                </footer>
-
+                                <div class="header__cart-item">
+                                    <div class="header__cart-item-img">
+                                        <img src="./assets/imgs/notify_imgs/iphone 14 pro max.jpg" alt=""
+                                            class="header__cart-item-not-empty-img">
+                                    </div>
+                                    <div class="header__cart-item-description">
+                                        <h3 class="header__cart-item-description-title">IPhone 14 Pro Max 128GB</h3>
+                                        <span class="header__cart-item-description-type">Phân loại hàng: Màu Đen</span>
+                                    </div>
+                                    <div class="header__cart-item-info">
+                                        <div class="header__cart-item-info-header">
+                                            <h3 class="header__cart-item-info-price">36,000,000</h3>
+                                            <span class="header__cart-item-info-quantity">x 1</span>
+                                        </div>
+                                        <div class="header__cart-item-info-btn">
+                                            <a href="" class="header__cart-item-info-link">Xóa</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header__cart-item">
+                                    <div class="header__cart-item-img">
+                                        <img src="./assets/imgs/notify_imgs/iphone 14 pro max.jpg" alt=""
+                                            class="header__cart-item-not-empty-img">
+                                    </div>
+                                    <div class="header__cart-item-description">
+                                        <h3 class="header__cart-item-description-title">IPhone 14 Pro Max 128GB</h3>
+                                        <span class="header__cart-item-description-type">Phân loại hàng: Màu Đen</span>
+                                    </div>
+                                    <div class="header__cart-item-info">
+                                        <div class="header__cart-item-info-header">
+                                            <h3 class="header__cart-item-info-price">36,000,000</h3>
+                                            <span class="header__cart-item-info-quantity">x 1</span>
+                                        </div>
+                                        <div class="header__cart-item-info-btn">
+                                            <a href="" class="header__cart-item-info-link">Xóa</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header__cart-item">
+                                    <div class="header__cart-item-img">
+                                        <img src="./assets/imgs/notify_imgs/iphone 14 pro max.jpg" alt=""
+                                            class="header__cart-item-not-empty-img">
+                                    </div>
+                                    <div class="header__cart-item-description">
+                                        <h3 class="header__cart-item-description-title">IPhone 14 Pro Max 128GB</h3>
+                                        <span class="header__cart-item-description-type">Phân loại hàng: Màu Đen</span>
+                                    </div>
+                                    <div class="header__cart-item-info">
+                                        <div class="header__cart-item-info-header">
+                                            <h3 class="header__cart-item-info-price">36,000,000</h3>
+                                            <span class="header__cart-item-info-quantity">x 1</span>
+                                        </div>
+                                        <div class="header__cart-item-info-btn">
+                                            <a href="" class="header__cart-item-info-link">Xóa</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+
+                            <footer class="header__cart-list-footer">
+                                <a href="" class="header__cart-view-cart-btn">
+                                    Xem Giỏ Hàng
+                                </a>
+                            </footer>
+
                         </div>
                     </div>
 
@@ -340,7 +397,7 @@
 
         <div class="app__container">
             <div class="grid">
-                <div class="grid__row">
+                <div class="grid__row app_content">
                     <div class="grid__column-2">
                         <nav class="category">
                             <h3 class="category__heading">
@@ -349,19 +406,276 @@
                             </h3>
                             <ul class="category-list">
                                 <li class="category-item category-item--active">
-                                    <a href="" class="category-item__link">Trang điểm mặt</a>
+                                    <a href="" class="category-item__link">Sản Phẩm Thịnh Hành</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="" class="category-item__link">Trang điểm môi</a>
+                                    <a href="" class="category-item__link">Sản Phẩm Bán Chạy</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="" class="category-item__link">Trang điểm mắt</a>
+                                    <a href="" class="category-item__link">Đồ Gia Đình</a>
                                 </li>
                             </ul>
                         </nav>
                     </div>
 
                     <div class="grid__column-10">
+
+                        <div class="home-filter">
+                            <span class="home-filter__label">
+                                Sắp xếp theo
+                            </span>
+                            <button class="home-filter__btn btn">Phổ Biến</button>
+                            <button class="home-filter__btn btn btn--primary">Mới Nhất</button>
+                            <button class="home-filter__btn btn">Bán Chạy</button>
+                            <div class="select-input">
+                                <span class="select-input__label">Giá</span>
+                                <i class="select-input-label__icon fa-solid fa-angle-down"></i>
+                                <!-- List Price Options -->
+                                <ul class="select-input__list">
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">Giá Thấp Đến Cao</a>
+                                    </li>
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">Giá Cao Đến Thấp</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="home-filter__page">
+                                <span class="home-filter__page-num">
+                                    <span class="home-filter___page-current">1</span>
+                                    /14
+                                </span>
+                                <div class="home-filter__page-control">
+                                    <a href="" class="home-filter__page-btn home-filter__page-btn--disabled">
+                                        <i class="home-filter__page-icon fa-solid fa-angle-left"></i>
+                                    </a>
+                                    <a href="" class="home-filter__page-btn">
+                                        <i class="home-filter__page-icon fa-solid fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product">
+                            <div class="grid__row">
+                                <div class="grid__column-2-4">
+                                    <a class="product-item" href="">
+                                        <div class="product-item__img"
+                                            style="background-image: url(./assets/imgs/product_imgs/máy\ massage.jpg);">
+                                        </div>
+                                        <h4 class="product-item__name">Máy massage cổ vai gáy cao cấp CHƯỜM NÓNG
+                                            HỒNG NGOẠI 42 độ C - 4 đầu tiếp xúc, 6 chế độ mat xa, 9 cường độ.</h4>
+                                        <div class="product-item__price">
+                                            <span class="product-item__price-old">1.200.000đ</span>
+                                            <span class="product-item__price-currend">990.000đ</span>
+                                        </div>
+                                        <div class="product-item__sold">
+                                            <span class="product-item__sold-title">Đã bán 1,2k</span>
+                                        </div>
+                                        <div class="product-item__action">
+                                            <span class="product-item__like">
+                                                <i class="fa-regular fa-heart"></i>
+                                                <!-- <i class="fa-solid fa-heart"></i> -->
+                                            </span>
+                                            <div class="product-item__rating">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="product-item-origin">
+                                            <span class="product-item__brand">Whoo</span>
+                                            <span class="product-item__origin-name">Trung Quốc</span>
+                                        </div>
+                                        <div class="product-item_favorite">
+                                            <i class="product-item_favorite-icon fa-solid fa-check"></i>
+                                            Yêu thích
+                                        </div>
+                                        <div class="product-item__sale-off">
+                                            <span class="product-item__sale-off-percent">
+                                                10%
+                                            </span>
+                                            <span class="product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="grid__column-2-4">
+                                    <a class="product-item" href="">
+                                        <div class="product-item__img"
+                                            style="background-image: url(./assets/imgs/product_imgs/đồng\ hồ\ thông\ minh.jpg);">
+                                        </div>
+                                        <h4 class="product-item__name">Đồng Hồ Thông Minh Y68 / D20 Fitpro IP67 Chống Thấm Nước 1.44</h4>
+                                        <div class="product-item__price">
+                                            <span class="product-item__price-old">1.660.000đ</span>
+                                            <span class="product-item__price-currend">1.230.000đ</span>
+                                        </div>
+                                        <div class="product-item__sold">
+                                            <span class="product-item__sold-title">Đã bán 1k</span>
+                                        </div>
+                                        <div class="product-item__action">
+                                            <span class="product-item__like">
+                                                <i class="fa-regular fa-heart"></i>
+                                                <!-- <i class="fa-solid fa-heart"></i> -->
+                                            </span>
+                                            <div class="product-item__rating">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="product-item-origin">
+                                            <span class="product-item__brand">Fitpro</span>
+                                            <span class="product-item__origin-name">Trung Quốc</span>
+                                        </div>
+                                        <div class="product-item_favorite">
+                                            <i class="product-item_favorite-icon fa-solid fa-check"></i>
+                                            Yêu thích
+                                        </div>
+                                        <div class="product-item__sale-off">
+                                            <span class="product-item__sale-off-percent">
+                                                29%
+                                            </span>
+                                            <span class="product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="grid__column-2-4">
+                                    <a class="product-item" href="">
+                                        <div class="product-item__img"
+                                            style="background-image: url(./assets/imgs/product_imgs/tay\ nghe.jpg);">
+                                        </div>
+                                        <h4 class="product-item__name">Tai nghe chụp tai không dây bluetooth STN28 màu sắc cute,âm thanh ấm bass mạnh- Phụ Kiện 123</h4>
+                                        <div class="product-item__price">
+                                            <span class="product-item__price-old">312.002đ</span>
+                                            <span class="product-item__price-currend">199.998đ</span>
+                                        </div>
+                                        <div class="product-item__sold">
+                                            <span class="product-item__sold-title">Đã bán 2k</span>
+                                        </div>
+                                        <div class="product-item__action">
+                                            <span class="product-item__like">
+                                                <i class="fa-regular fa-heart"></i>
+                                                <!-- <i class="fa-solid fa-heart"></i> -->
+                                            </span>
+                                            <div class="product-item__rating">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="product-item-origin">
+                                            <span class="product-item__brand">STN28</span>
+                                            <span class="product-item__origin-name">Hà Nội</span>
+                                        </div>
+                                        <div class="product-item_favorite">
+                                            <i class="product-item_favorite-icon fa-solid fa-check"></i>
+                                            Yêu thích
+                                        </div>
+                                        <div class="product-item__sale-off">
+                                            <span class="product-item__sale-off-percent">
+                                                38%
+                                            </span>
+                                            <span class="product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="grid__column-2-4">
+                                    <a class="product-item" href="">
+                                        <div class="product-item__img"
+                                            style="background-image: url(./assets/imgs/product_imgs/đồng\ hồ\ để\ bàn.jpg);">
+                                        </div>
+                                        <h4 class="product-item__name">Loa bluetooth đồng hồ G5, loa mini không dây nghe nhạc làm đèn ngủ màn hình soi gương</h4>
+                                        <div class="product-item__price">
+                                            <span class="product-item__price-old">269.000đ</span>
+                                            <span class="product-item__price-currend">159.000đ</span>
+                                        </div>
+                                        <div class="product-item__sold">
+                                            <span class="product-item__sold-title">Đã bán 5,2k</span>
+                                        </div>
+                                        <div class="product-item__action">
+                                            <span class="product-item__like">
+                                                <i class="fa-regular fa-heart"></i>
+                                                <!-- <i class="fa-solid fa-heart"></i> -->
+                                            </span>
+                                            <div class="product-item__rating">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="product-item-origin">
+                                            <span class="product-item__brand">G5</span>
+                                            <span class="product-item__origin-name">Hồ Chí Minh</span>
+                                        </div>
+                                        <div class="product-item_favorite">
+                                            <i class="product-item_favorite-icon fa-solid fa-check"></i>
+                                            Yêu thích
+                                        </div>
+                                        <div class="product-item__sale-off">
+                                            <span class="product-item__sale-off-percent">
+                                                50%
+                                            </span>
+                                            <span class="product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="grid__column-2-4">
+                                    <a class="product-item" href="">
+                                        <div class="product-item__img"
+                                            style="background-image: url(./assets/imgs/product_imgs/loa.jpg);">
+                                        </div>
+                                        <h4 class="product-item__name">[XẢ HẾT KHO] micro cho mọi loại loa- MICRO CHO LOA KÉO BLUETOOTH P88 P89 - MICRO dàn</h4>
+                                        <div class="product-item__price">
+                                            <span class="product-item__price-old">100.000đ</span>
+                                            <span class="product-item__price-currend">49.000đ</span>
+                                        </div>
+                                        <div class="product-item__sold">
+                                            <span class="product-item__sold-title">Đã bán 503</span>
+                                        </div>
+                                        <div class="product-item__action">
+                                            <span class="product-item__like">
+                                                <i class="fa-regular fa-heart"></i>
+                                                <!-- <i class="fa-solid fa-heart"></i> -->
+                                            </span>
+                                            <div class="product-item__rating">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="product-item-origin">
+                                            <span class="product-item__brand">P89</span>
+                                            <span class="product-item__origin-name">Trung Quốc</span>
+                                        </div>
+                                        <div class="product-item_favorite">
+                                            <i class="product-item_favorite-icon fa-solid fa-check"></i>
+                                            Yêu thích
+                                        </div>
+                                        <div class="product-item__sale-off">
+                                            <span class="product-item__sale-off-percent">
+                                                30%
+                                            </span>
+                                            <span class="product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
 
                     </div>
                 </div>
