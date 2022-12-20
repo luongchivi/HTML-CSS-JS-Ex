@@ -1,0 +1,36 @@
+:root {
+    --text-color: rgb(0, 0, 0);
+    --white-color: #fff;
+    --hover-color: #ccc;
+    --red-color: #df3131;
+    --border-color: rgb(182, 182, 182);
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.grid {
+    width: 1300px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: var(--white-color);
+}
+
+.container-bg-black {
+    background-color: var(--text-color);
+}
+
+.content__heading-bg-black {
+    color: var(--white-color);
+}
+
+.content__solgan-bg-black {
+    color: var(--white-color);
+}
