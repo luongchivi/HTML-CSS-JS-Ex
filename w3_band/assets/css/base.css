@@ -34,3 +34,125 @@ html {
 .content__solgan-bg-black {
     color: var(--white-color);
 }
+
+/* 
+    PC:         >= 1024px 
+    Tablet:     >= 739px & < 1024px
+    Mobile:     <  739px
+*/
+
+/* Break Point */
+
+/* PC */
+@media (min-width: 64em) {
+    .header {
+        overflow: unset;
+    }
+
+    .header__item:nth-child(6) {
+        display: none;
+    }
+}
+
+/* Tablet */
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+    .header{
+        overflow: unset;
+    }
+
+    .header__item:nth-child(6) {
+        display: none;
+    }
+
+    .content {
+        width: 90%;
+        margin: 0 auto;
+        padding: 3.5rem 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 46.1875em) {
+    .header{
+        overflow: hidden;
+    }
+
+    .header__list {
+        display: block;
+    }
+
+    .header__item:nth-child(6) {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .header__item:last-child {
+        position: absolute;
+        top: 0;
+        display: none;
+    }
+
+    .header__item-sub-menu {
+        width: 100%;
+    }
+
+    .content {
+        width: 90%;
+        margin: 0 auto;
+        padding: 3.5rem 0;
+    }
+
+    .content__item-month__label {
+        min-width: 25%;
+    }
+
+    .content__member-in-band {
+        flex-direction: column;
+    }
+
+    .content__member {
+        width: 100%;
+        margin: 2rem 0;
+    }
+
+    .content__member-name {
+        font-size: 1.8rem;
+    }
+
+    .content__item-month__available-ticket {
+        right: 2rem;
+    }
+
+    .content__ticket-list {
+        flex-direction: column;
+    }
+
+    .content__ticket-item {
+        margin: 1.5rem 0;
+    }
+
+    .content__ticket-item:nth-child(2) {
+        margin: 1.5rem 0;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact-right__input-first-row {
+        justify-content: space-between;
+    }
+
+    .contact-right__input-name {
+        flex: unset;
+        width: 49%;
+        margin-right: 0;
+    }
+
+    .contact-right__input-email {
+        width: 49%;
+        flex: unset;
+    }
+}
