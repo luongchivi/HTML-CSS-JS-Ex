@@ -4,6 +4,7 @@
     --hover-color: #ccc;
     --red-color: #df3131;
     --border-color: rgb(182, 182, 182);
+    --bg-sub-menu-color: rgb(20, 18, 18);
 }
 
 html {
@@ -92,6 +93,11 @@ html {
         position: absolute;
         top: 0;
         display: none;
+    }
+
+    .header__item-sub-menu__list{
+        background-color: var(--bg-sub-menu-color);
+        padding-left: 2rem;
     }
 
     .header__item-sub-menu {

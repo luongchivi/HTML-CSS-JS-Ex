@@ -44,7 +44,8 @@
                         </a>
                     </li>
                     <li class="header__item header__item-has-sub-menu">
-                        <a href="#" class="header__item-link">
+                        <a href="#" class="header__item-link" id="header__item-mobile-navbar-onclick-sub-menu"
+                            onclick="clickOnSubMenu()">
                             MORE
                             <i class="header__item-icon fa-solid fa-angle-down"></i>
                         </a>
@@ -244,6 +245,20 @@
         </div>
     </div>
     <script>
+        function clickOnSubMenu() {
+            var itemClick = document.getElementById('header__item-mobile-navbar-onclick-sub-menu');
+            var subMenu = itemClick.nextElementSibling;
+            itemClick.onclick = function () {
+                var isClosed = subMenu.clientHeight === 171;
+                if (isClosed) {
+                    subMenu.style.display = 'none';
+                } else {
+                    subMenu.style.display = 'block';
+                }
+            }
+        }
+
+
         function clickNavbarOnMobile() {
             var header = document.getElementsByClassName('header');
             var mobileNavbar = document.getElementById('header__item-mobile-navbar');
@@ -252,42 +267,36 @@
                 if (isClosed) {
                     header[0].style.height = 'unset';
                     header[0].style.overflow = 'unset';
-                    console.log(header[0].clientHeight)
                 } else {
                     header[0].style.height = '5.7rem';
                     header[0].style.overflow = 'hidden';
-                    console.log(header[0].clientHeight)
                 }
             }
-            // Đóng menu navbar khi click vào item-link
+
             var menuItems = document.querySelectorAll('ul.header__list > li.header__item > a.header__item-link[href*="#"]');
-            // console.log(menuItems)
+            // var menuItem = menuItems[menuItems.length - 1];
+            // console.log(menuItem);
+            // console.log(menuItem.nextElementSibling);
+            // console.log(menuItem.nextElementSibling.classList.contains('header__item-sub-menu'));
+            console.log(menuItems)
             for (var i = 0; i < menuItems.length; i++) {
                 var menuItem = menuItems[i];
-                // console.log(menuItem)
-                console.log(menuItem.nextElementSibling)
-                var isParenMenu = menuItem.nextElementSibling && menuItem.classList.contains('header__item-sub-menu')[1];
-                console.log('Check value ' + isParenMenu)
-                // console.log(header[0])
-                menuItem.onclick = function () {
-                    if (!isParenMenu) {
-                        // console.log(this)
-                        console.log('Check value ' + isParenMenu)
+                menuItem.onclick = function (event) {
+                    var isParenMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('header__item-sub-menu');
+                    if (isParenMenu === true) {
+                        header[0].style.height = 'unset';
+                        header[0].style.overflow = 'unset';
+                        console.log('True')
+                        clickOnSubMenu()
+                    } else {
                         header[0].style.height = '5.7rem';
                         header[0].style.overflow = 'hidden';
-                        console.log(header[0])
+                        console.log('False')
                     }
-                    // else {
-                    //     header[0].style.height = 'unset';
-                    //     header[0].style.overflow = 'unset';
-                    //     var subMenu = document.getElementsByClassName('header__item-sub-menu')[0];
-                    //     subMenu.style.display = 'block';
-                    // }
-
                 }
             }
-        }
 
+        }
     </script>
 </body>
 
