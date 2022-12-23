@@ -287,6 +287,11 @@
     border-radius: 0.2rem;
 }
 
+.content__ticket-item__link:hover {
+    background-color: var(--border-color);
+    color: var(--text-color);
+}
+
 /* Content CONTACT */
 .contact {
     display: flex;
@@ -383,6 +388,11 @@
     padding: 0.7rem 0.5rem;
 }
 
+.contact-right__input__link:hover {
+    background-color: var(--border-color);
+    color: var(--text-color);
+}
+
 /* Map */
 .map {
     margin: 3.7rem;
@@ -404,4 +414,111 @@
     font-size: 1.5rem;
     font-weight: 400;
     padding: 3rem;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    visibility: hidden;
+}
+
+.modal-container {
+    margin: auto;
+    background-color: var(--white-color);
+    width: 40%;
+    min-height: 25vh;
+    border-radius: 3px;
+    overflow: auto;
+    box-shadow: 0rem 0.1rem 0.5rem var(--text-color);
+}
+
+.modal-close {
+    position: relative;
+}
+
+.modal-close>i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2.5rem;
+    line-height: 1.5rem;
+    padding: 1rem;
+    color: var(--white-color);
+}
+
+.modal-close>i:hover {
+    background-color: var(--hover-color);
+    color: var(--text-color);
+    border-radius: 3px;
+}
+
+.modal-header {
+    height: 7rem;
+    text-align: center;
+    background-color: var(--text-color);
+    color: var(--white-color);
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-header__title {
+    margin: auto;
+}
+
+.modal-body {
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-label {
+    margin: 1rem 0;
+    font-size: 1.3rem;
+}
+
+.modal-input {
+    padding: 0.8rem 1rem;
+    outline: none;
+    border: 0.001rem solid var(--text-color);
+    border-radius: 2px;
+}
+
+.modal-button {
+    margin: 1rem 0;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    background-color: var(--text-color);
+    color: var(--white-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2.5rem;
+}
+
+.modal-button:hover {
+    background-color: var(--hover-color);
+    color: var(--text-color);
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-footer__help {
+    margin: auto;
+    font-size: 1.4rem;
+    margin: 1rem;
 }

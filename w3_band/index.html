@@ -18,7 +18,7 @@
     <title>The Band</title>
 </head>
 
-<body>
+<body onload="init()">
     <div class="wrapper">
         <div class="header">
             <div class="grid">
@@ -243,17 +243,54 @@
         <div class="footer">
             <h3 class="footer__heading">Powered by Luong Chi Vi.</h3>
         </div>
+
+
+        <div class="modal">
+            <div class="modal-container">
+                <div class="modal-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <header class="modal-header">
+                    <div class="modal-header__title">
+                        <i class="fa-solid fa-suitcase"></i>
+                        <span>Ticket</span>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <label for="" class="modal-label">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Tickets, $15 per person
+                    </label>
+                    <input type="text" class="modal-input" placeholder="How many?">
+                    <label for="" class="modal-label">
+                        <i class="fa-solid fa-user"></i>
+                        Send To
+                    </label>
+                    <input type="email" class="modal-input" placeholder="Enter email">
+                    <button class="modal-button">PAY</button>
+                </div>
+                <footer class="modal-footer">
+                    <span class="modal-footer__help">
+                        Need
+                        <a href="#" class="modal-footer__link"> help?</a>
+                    </span>
+                </footer>
+            </div>
+        </div>
+
     </div>
     <script>
         function clickOnSubMenu() {
             var itemClick = document.getElementById('header__item-mobile-navbar-onclick-sub-menu');
             var subMenu = itemClick.nextElementSibling;
-            itemClick.onclick = function () {
+            itemClick.onclick = function (event) {
                 var isClosed = subMenu.clientHeight === 171;
                 if (isClosed) {
                     subMenu.style.display = 'none';
+                    event.preventDefault();
                 } else {
                     subMenu.style.display = 'block';
+                    event.preventDefault();
                 }
             }
         }
@@ -286,16 +323,36 @@
                     if (isParenMenu === true) {
                         header[0].style.height = 'unset';
                         header[0].style.overflow = 'unset';
-                        console.log('True')
+                        console.log('True');
+
+                        event.preventDefault();
                         clickOnSubMenu()
                     } else {
                         header[0].style.height = '5.7rem';
                         header[0].style.overflow = 'hidden';
-                        console.log('False')
+                        console.log('False');
                     }
                 }
             }
 
+        }
+
+        function init() {
+            const buyTickets = document.getElementsByClassName('content__ticket-item__link')
+            console.log(buyTickets)
+            for (var i = 0; i < buyTickets.length; i++) {
+                var buyTicket = buyTickets[i]
+                buyTicket.onclick = function (event) {
+                    var modal = document.getElementsByClassName('modal')[0]
+                    event.preventDefault()
+                    console.log(modal)
+                    modal.style.visibility = 'unset'
+                    var closeBtn = document.getElementsByClassName('fa-solid fa-xmark')[0]
+                    closeBtn.onclick = function () {
+                        modal.style.visibility = 'hidden'
+                    }
+                }
+            }
         }
     </script>
 </body>
